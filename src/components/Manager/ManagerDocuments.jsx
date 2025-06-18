@@ -33,7 +33,7 @@ const ManagerD = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 4px;
     padding: 20px;
   }
@@ -59,7 +59,7 @@ const ManagerD = styled.section`
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: #f6f6f8;
+    background: #ffffff;
     width: 300px;
     height: 200px;
     margin: 20px 0;

@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import profile from '../../assets/Frame 2007 (1).png'
 import edit from '../../assets/edit-01 (2).png'
 import logout from '../../assets/logout-03.png'
+import { useNavigate } from 'react-router-dom'
 
 const ManagerProfileSettings = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <ManagerPS>
@@ -19,7 +22,10 @@ const ManagerProfileSettings = () => {
             </div>
             <div className='profile-picture'>
               <img className='p-img' src={profile} alt='Profile' />
-              <div className='edit-p'>
+              <div
+                onClick={() => navigate('/manager/edit-profile')}
+                className='edit-p'
+              >
                 <img src={edit} alt='Edit-Profile' />
                 <p>Edit Profile</p>
               </div>

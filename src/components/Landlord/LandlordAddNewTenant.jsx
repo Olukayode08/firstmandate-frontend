@@ -7,14 +7,14 @@ const LandlordAddNewTenant = () => {
         <section>
           <main className='l-section'>
             <h3 className='add-t'>Add New Tenant</h3>
-            <label>Select Unit</label>
+            {/* <label>Select Unit</label>
             <div className='select'>
               <select>
                 <option value='option1'>Unit 1</option>
                 <option value='option2'>Unit 2</option>
                 <option value='option3'>Unit 3</option>
               </select>
-            </div>
+            </div> */}
 
             <div className='input'>
               <label>Name</label>
@@ -60,8 +60,38 @@ const LandlordAddNewTenant = () => {
             </div>
             <div className='rent-status'>
               <label>Rent Payment Status</label>
-              <div className='tenants-name'>
+              <div className='pay-status'>
+                <p className='part-p'>Paid in Part</p>
+                <p className='full-p'>Paid in Full</p>
                 <p className='not-p'>Not Paid</p>
+              </div>
+            </div>
+            <div className='payment-type'>
+              <div className='payment'>
+                <label>Rent Payment Type*</label>
+                <div className='select'>
+                  <select>
+                    <option value='option1'>Installment</option>
+                  </select>
+                </div>
+              </div>
+              <div className='payment'>
+                <label>Number of Instalment*</label>
+                <div className='select'>
+                  <select>
+                    <option value='option1'>3 times</option>
+                  </select>
+                </div>
+              </div>
+              <div className='payment'>
+                <label>Amount for each instalment*</label>
+                <div className='select'>
+                  <input
+                    type='text'
+                    placeholder='#100,000'
+                    className='r-amt-input'
+                  />
+                </div>
               </div>
             </div>
             <div className='due-date'>
@@ -89,6 +119,15 @@ const LANTenant = styled.section`
   .add-t {
     margin: 20px 0;
   }
+  .payment-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .payment {
+    display: flex;
+    flex-direction: column;
+  }
   .select {
     display: flex;
     flex-direction: column;
@@ -107,6 +146,13 @@ const LANTenant = styled.section`
     height: 100%;
     width: 100%;
   }
+
+  .r-amt-input {
+    width: 100%;
+    border: none;
+    height: 100%;
+  }
+
   .input {
     display: flex;
     flex-direction: column;
@@ -155,13 +201,30 @@ const LANTenant = styled.section`
   .rent-status {
     margin: 10px 0;
   }
+  .pay-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .part-p,
+  .full-p,
   .not-p {
-    background-color: #ff0000;
     color: #ffffff;
     padding: 12px 0;
     width: 120px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
+  }
+  .not-p {
+    background-color: #ff0000;
+  }
+  .full-p {
+    background-color: #ff7a20;
+  }
+  .part-p {
+    background-color: #159e23;
   }
   .add-tenant {
     width: 220px;

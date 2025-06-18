@@ -24,7 +24,7 @@ export const managerOptions = [
     icon: uploadIcon,
     heading: 'Upload New Property',
     text: 'Expand Your Portfolio: Integrate New Properties with Ease.',
-    navigate: '#',
+    navigate: '/manager/upload-property',
   },
   {
     id: 1114,
@@ -45,6 +45,6 @@ export const managerOptions = [
     icon: vectorIcon,
     heading: 'View Due Dates',
     text: 'Track Deadlines: Stay On Top of Important Dates and Tasks',
-    navigate: '#',
+    navigate: '/manager/due-dates',
   },
 ]

@@ -3,8 +3,10 @@ import { FaRegBell } from 'react-icons/fa6'
 import { FaRegUser } from 'react-icons/fa'
 import logo from '../../assets/1st mandate logo 1.png'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 const PropertyManagerHeader = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Wrapper>
@@ -14,13 +16,19 @@ const PropertyManagerHeader = () => {
           </div>
           <div className='select-user'>
             <select name='user' id='user'>
-              <option value='Landlord'>Landlord</option>
               <option value='Manager'>Property Manager</option>
+              <option value='Landlord'>Landlord</option>
               <option value='Tenant'>Tenant</option>
             </select>
             <div className='icons'>
-              <FaRegBell className='icon' />
-              <FaRegUser className='icon' />
+              <FaRegBell
+                onClick={() => navigate('/manager/notifications')}
+                className='icon'
+              />
+              <FaRegUser
+                onClick={() => navigate('/manager/profile-settings')}
+                className='icon'
+              />
             </div>
           </div>
         </div>

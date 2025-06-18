@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { landlordReminder } from '../../datas/LandLordReminder'
+import { Link } from 'react-router-dom'
+import { FaRegPlusSquare } from 'react-icons/fa'
 
 const TenantReminders = () => {
   const [data, setData] = useState(landlordReminder)
@@ -40,7 +42,19 @@ const TenantReminders = () => {
         <section>
           <main className='r-section'>
             <div className='landlord-reminder'>
-              <h3 className='r-heading'>Reminders</h3>
+              <div className='a-tenant'>
+                <h3>Reminders</h3>
+                <div className='set-reminders'>
+                  <Link to='#' className='set-r'>
+                    <h4>Send Reminder</h4>
+                    <FaRegPlusSquare size={20} />
+                  </Link>
+                  <Link to='/tenant/add-reminder' className='add-r'>
+                    <h4>Add Reminder</h4>
+                    <FaRegPlusSquare size={20} />
+                  </Link>
+                </div>
+              </div>
               {data.map((reminder) => {
                 return (
                   <div key={reminder.id} className='reminders'>
@@ -90,8 +104,40 @@ const TenantR = styled.section`
     flex-direction: column;
     width: 100%;
   }
+  .a-tenant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+  }
   .r-heading {
     margin: 20px 0;
+  }
+  .set-reminders {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .set-r,
+  .add-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe48e;
+    padding: 15px;
+    height: 48px;
+    border-radius: 4px;
+    width: 200px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .set-r {
+    background-color: #ffffff;
+    border: 1px solid black;
+    height: 48px;
   }
   .reminders {
     width: 100%;
@@ -153,6 +199,19 @@ const TenantR = styled.section`
     flex-shrink: 0;
   }
   @media screen and (max-width: 900px) {
+    .a-tenant {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: left;
+    }
+    .set-r,
+    .add-r {
+      width: 190px;
+      flex-shrink: 0;
+    }
+    .set-reminders {
+      margin: 20px 0 10px 0;
+    }
     .r-desc {
       margin-left: 25px;
     }

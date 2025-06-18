@@ -100,7 +100,7 @@ const TenantSidebar = () => {
                   <LuWalletCards size={23} className='icon' />
                   <p className='desc'>Reminders</p>
                 </Link>
-                <Link
+                {/* <Link
                   onClick={closeSidebar}
                   className={
                     location.pathname === '/tenant/notifications'
@@ -111,7 +111,7 @@ const TenantSidebar = () => {
                 >
                   <IoNotifications size={23} className='icon' />
                   <p className='desc'>Notifications</p>
-                </Link>
+                </Link> */}
                 <Link
                   onClick={closeSidebar}
                   className={
@@ -124,6 +124,18 @@ const TenantSidebar = () => {
                 >
                   <LuWalletCards size={23} className='icon' />
                   <p className='desc'>Payment</p>
+                </Link>
+                <Link
+                  onClick={closeSidebar}
+                  className={
+                    location.pathname === '/tenant/due-dates' 
+                      ? 'active links'
+                      : 'links'
+                  }
+                  to='/tenant/due-dates'
+                >
+                  <LuWalletCards size={23} className='icon' />
+                  <p className='desc'>Rent Due Dates</p>
                 </Link>
                 <div className='banner-add'>
                   <img

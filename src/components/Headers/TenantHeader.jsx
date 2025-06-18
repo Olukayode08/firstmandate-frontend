@@ -3,8 +3,11 @@ import { FaRegBell } from 'react-icons/fa6'
 import { FaRegUser } from 'react-icons/fa'
 import styled from 'styled-components'
 import logo from '../../assets/1st mandate logo 1.png'
+import { useNavigate } from 'react-router-dom'
 
 const TenantHeader = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <THeader>
@@ -14,13 +17,19 @@ const TenantHeader = () => {
           </div>
           <div className='select-user'>
             <select name='user' id='user'>
+              <option value='Tenant'>Tenant</option>
               <option value='Landlord'>Landlord</option>
               <option value='Manager'>Property Manager</option>
-              <option value='Tenant'>Tenant</option>
             </select>
             <div className='icons'>
-              <FaRegBell className='icon' />
-              <FaRegUser className='icon' />
+              <FaRegBell
+                onClick={() => navigate('/tenant/notifications')}
+                className='icon'
+              />
+              <FaRegUser
+                onClick={() => navigate('/tenant/profile-settings')}
+                className='icon'
+              />
             </div>
           </div>
         </div>

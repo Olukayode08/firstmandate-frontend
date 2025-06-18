@@ -77,7 +77,7 @@ const TenantApartmentDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className='t-plan'>
+              {/* <div className='t-plan'>
                 <p className='plan-text'>
                   What do you plan to do after your rent has ended?
                 </p>
@@ -93,7 +93,7 @@ const TenantApartmentDetails = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

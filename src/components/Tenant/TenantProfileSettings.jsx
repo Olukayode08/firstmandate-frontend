@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import profile from '../../assets/Frame 2007 (1).png'
 import edit from '../../assets/edit-01 (2).png'
 import logout from '../../assets/logout-03.png'
+import { useNavigate } from 'react-router-dom'
 
 const TenantProfileSettings = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <TenantPS>
@@ -19,7 +22,10 @@ const TenantProfileSettings = () => {
             </div>
             <div className='profile-picture'>
               <img className='p-img' src={profile} alt='Profile' />
-              <div className='edit-p'>
+              <div
+                onClick={() => navigate('/tenant/edit-profile')}
+                className='edit-p'
+              >
                 <img src={edit} alt='Edit-Profile' />
                 <p>Edit Profile</p>
               </div>
@@ -44,7 +50,7 @@ const TenantProfileSettings = () => {
                   <input className='r-btn-input' type='radio' />
                 </div>
               </div>
-              {/* <h4>Notification Type</h4>
+              <h4>Notification Type</h4>
               <div className='n-s-btns'>
                 <div className='n-btn'>
                   <input className='r-btn-input' type='checkbox' />
@@ -54,7 +60,7 @@ const TenantProfileSettings = () => {
                   <input className='r-btn-input' type='checkbox' />
                   <p>Sms</p>
                 </div>
-              </div> */}
+              </div>
             </div>
           </main>
         </section>

@@ -10,6 +10,11 @@ body {
   font-family: 'Varela Round', sans-serif;
   overflow-x: hidden;
 }
+option,
+select,
+input{
+  font-family: inherit;
+}
 h3,
 h1{
   font-size: 18px;

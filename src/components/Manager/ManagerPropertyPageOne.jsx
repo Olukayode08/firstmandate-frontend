@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { managerProperty } from '../../datas/ManagerPropertyPageOne'
 import { FaRegPlusSquare } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ManagerPropertyPageOne = () => {
+
+  const navigate = useNavigate()
   return (
     <>
       <ManagerPPO>
@@ -12,7 +14,7 @@ const ManagerPropertyPageOne = () => {
           <main className='l-section'>
               <div className='a-ppt'>
                 <h3>Properties</h3>
-                <Link className='add-r'>
+                <Link to={'/manager/upload-property'} className='add-r'>
                   <h4>Add New Property</h4>
                   <FaRegPlusSquare size={20} />
                 </Link>
@@ -20,7 +22,11 @@ const ManagerPropertyPageOne = () => {
               <div className='l-options'>
                 {managerProperty.map((property) => {
                   return (
-                    <div className='options' key={property.id}>
+                    <div
+                      onClick={() => navigate('/manager/property')}
+                      className='options'
+                      key={property.id}
+                    >
                       <img src={property.icon} alt='Icon' />
                       <h1 className='option-h'>{property.heading}</h1>
                       <p className='option-text'>{property.street}</p>

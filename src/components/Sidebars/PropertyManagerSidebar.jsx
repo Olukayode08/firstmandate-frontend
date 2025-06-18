@@ -11,6 +11,7 @@ import { MdOutlineOnDeviceTraining } from 'react-icons/md'
 import { Link, useLocation } from 'react-router-dom'
 import ThemeMode from '../BackgroundColor/ThemeMode'
 import { ThemeContext } from '../../context/Darkmode'
+import { IoDocumentTextOutline } from 'react-icons/io5'
 
 const PropertyManagerSidebar = () => {
   const { active, setActive } = useContext(ThemeContext)
@@ -115,7 +116,7 @@ const PropertyManagerSidebar = () => {
                   <LuWalletCards size={23} className='icon' />
                   <p className='desc'>Reminders</p>
                 </Link>
-                <Link
+                {/* <Link
                   onClick={closeSidebar}
                   className={
                     location.pathname === '/manager/notifications'
@@ -126,15 +127,23 @@ const PropertyManagerSidebar = () => {
                 >
                   <IoNotifications size={23} className='icon' />
                   <p className='desc'>Notifications</p>
-                </Link>
+                </Link> */}
 
                 <Link
                   onClick={closeSidebar}
                   className='links buttom-img'
-                  to='#'
+                  to='/manager/due-dates'
                 >
                   <TbReportSearch size={23} className='icon' />
                   <p className='desc'>Rent Due Dates</p>
+                </Link>
+                <Link
+                  onClick={closeSidebar}
+                  className='links buttom-img'
+                  to='/manager/documents'
+                >
+                  <IoDocumentTextOutline size={23} className='icon' />
+                  <p className='desc'>Documents</p>
                 </Link>
                 <div className='banner-add'>
                   <img
