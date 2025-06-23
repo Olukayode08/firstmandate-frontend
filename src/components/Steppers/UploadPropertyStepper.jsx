@@ -35,16 +35,11 @@ const UploadPropertyStepper = () => {
     <>
       <UploadPS>
         <section>
-          {/* {!uploadNewProperty ? (
-            <UploadProperty />
-          ) : (
-        
-          )} */}
+  
           <div className='multi-step-form'>
             <h2>Upload New Property</h2>
             {step === 1 && <p className='active-step'>1 of 2</p>}
             {step === 2 && <p className='active-step'>2 of 2</p>}
-            {/* {step === 3 && <p className='active-step'>3 of 3</p>} */}
             <div className='step-indicator'>
               <div className='progress-bar'>
                 <span
@@ -56,7 +51,6 @@ const UploadPropertyStepper = () => {
             <div className='step-content'>
               {step === 1 && <Step1 />}
               {step === 2 && <Step2 />}
-              {/* {step === 3 && <Step3 />} */}
             </div>
             <div className='step-buttons'>
               {step === 1 && (

@@ -42,7 +42,7 @@ const LandlordAddNewTenant = () => {
             </div>
             <div className='rent-date'>
               <div className='start-date'>
-                <label>Rent Start Date</label>
+                <label>Lease Start Date</label>
                 <input
                   type='date'
                   placeholder='dd/mm/yyyy'
@@ -50,7 +50,7 @@ const LandlordAddNewTenant = () => {
                 />
               </div>
               <div className='end-date'>
-                <label>Rent End Date</label>
+                <label>Lease End Date</label>
                 <input
                   type='date'
                   placeholder='dd/mm/yyyy'

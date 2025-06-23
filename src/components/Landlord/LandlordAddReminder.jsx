@@ -85,14 +85,17 @@ const LandlordAddReminder = () => {
                 className='r-date-input'
               />
             </div>
-            <div className='input'>
+            <div className='section'>
               <label>Time</label>
-              <input
-                className='r-date-input'
-                type='time'
-                value={currentTime}
-                onChange={(e) => setCurrentTime(e.target.value)}
-              />
+              <div className='n-input'>
+                <select className='n-select' id='unit' required>
+                  <option value='9'>9am</option>
+                  <option value='12'>12pm</option>
+                  <option value='3'>3pm</option>
+                  <option value='6'>6pm</option>
+                  <option value='9'>9pm</option>
+                </select>
+              </div>
             </div>
             <p className='save-btn'>Save</p>
           </main>
@@ -168,6 +171,25 @@ const LAReminder = styled.section`
   .r-date-input {
     height: 50px;
     width: 250px;
+  }
+  .n-input {
+    width: 250px;
+    margin: 10px 0;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  .n-select {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    background: transparent;
+    border: transparent;
+    outline: none;
+    color: #000;
+    font-family: inherit;
+    font-size: 15px;
   }
   .save-btn {
     width: 80px;

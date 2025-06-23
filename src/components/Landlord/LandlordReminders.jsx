@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { landlordReminder } from '../../datas/LandLordReminder'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaRegPlusSquare } from 'react-icons/fa'
 import LandlordEmptyReminder from './LandlordEmptyReminder'
 
 const LandlordReminders = () => {
+  const location = useLocation()
   const [data, setData] = useState(landlordReminder)
 
   const handleDelete = (id) => {
@@ -68,7 +69,9 @@ const LandlordReminders = () => {
                       <div className='img-amt'>
                         <img className='r-img' src={reminder.image} alt='' />
                         <div className='name-amt'>
-                          <h3 className='r-amt'>Mr Kelly</h3>
+                          {location.pathname !== '/tenant/reminders' && (
+                            <h3 className='r-amt'>Mr Kelly</h3>
+                          )}
                           <h3 className='r-amt'>{reminder.amount}</h3>
                         </div>
                       </div>

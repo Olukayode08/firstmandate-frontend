@@ -71,7 +71,7 @@ const RentTermsDD = styled.section`
     border: 1px solid black;
     border-radius: 4px;
     padding: 0 20px;
-    width: 200px;
+    width: 230px;
     height: 48px;
   }
   select {

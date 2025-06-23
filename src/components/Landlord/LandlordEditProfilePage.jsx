@@ -10,46 +10,34 @@ const LandlordEditProfilePage = () => {
             <h3>My Profile</h3>
             <div className='rent-sec'>
               <div className='profile-picture'>
-                <img className='p-img' src={profile} alt='Profile' />
+                <img className='p-img' src='' alt='Profile' />
                 <p className='c-picture'>Change Profile Picture</p>
               </div>
               <div className='apartment-details'>
                 <div className='t-details'>
                   <div className='input'>
                     <h1>First Name</h1>
-                    <input type='text' disabled placeholder='Peace' />
+                    <input type='text' placeholder='Peace' />
                   </div>
                   <div className='input'>
                     <h1>Last Name</h1>
-                    <input type='text' disabled placeholder='Adekola' />
+                    <input type='text' placeholder='Adekola' />
                   </div>
                 </div>
                 <div className='t-details'>
                   <div className='input'>
                     <h1>Email address</h1>
-                    <input
-                      type='text'
-                      disabled
-                      placeholder='peaceadekola2@gmail.com'
-                    />
+                    <input type='text' placeholder='peaceadekola2@gmail.com' />
                   </div>
                   <div className='input'>
                     <h1>Phone</h1>
-                    <input
-                      type='text'
-                      disabled
-                      placeholder='+234 814 6573 112'
-                    />
+                    <input type='text' placeholder='+234 814 6573 112' />
                   </div>
                 </div>
                 <div className='t-details'>
                   <div className='input'>
                     <h1>Whatsapp Number</h1>
-                    <input
-                      type='text'
-                      disabled
-                      placeholder='+234 814 6573 112'
-                    />
+                    <input type='text' placeholder='+234 814 6573 112' />
                   </div>
                   <p className='save-edits'>Save Edits</p>
                 </div>
@@ -88,6 +76,7 @@ const LandlordEPP = styled.section`
     width: 100px;
     height: 100px;
     margin: 15px 0;
+    border: 1px solid gray;
   }
   .c-picture {
     cursor: pointer;

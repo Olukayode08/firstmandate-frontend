@@ -41,39 +41,31 @@ const TenantApartmentDetails = () => {
                 <div className='t-details'>
                   <div className='input'>
                     <h1>Lanlord's Name</h1>
-                    <input type='text' disabled placeholder='Mr Adekola' />
+                    <input type='text' placeholder='Mr Adekola' />
                   </div>
                   <div className='input'>
                     <h1>Manager's Name</h1>
-                    <input type='text' disabled placeholder='Mr. Adewumi' />
+                    <input type='text' placeholder='Mr. Adewumi' />
                   </div>
                 </div>
                 <div className='t-details'>
                   <div className='input'>
                     <h1>Lanlord's Phone</h1>
-                    <input
-                      type='text'
-                      disabled
-                      placeholder='+234 814 6573 112'
-                    />
+                    <input type='text' placeholder='+234 814 6573 112' />
                   </div>
                   <div className='input'>
                     <h1>Managers's Phone</h1>
-                    <input
-                      type='text'
-                      disabled
-                      placeholder='+234 814 6573 112'
-                    />
+                    <input type='text' placeholder='+234 814 6573 112' />
                   </div>
                 </div>
                 <div className='t-details'>
                   <div className='input'>
                     <h1>Rent Amount per year</h1>
-                    <input type='text' disabled placeholder='#800.000.00k' />
+                    <input type='text' placeholder='#800.000.00k' />
                   </div>
                   <div className='input'>
-                    <h1>Current Rent Status</h1>
-                    <input type='text' disabled placeholder='Occupied' />
+                    <h1>Occupancy Status</h1>
+                    <input type='text' placeholder='Active' />
                   </div>
                 </div>
               </div>

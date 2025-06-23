@@ -21,10 +21,8 @@ import ManagerTenantList from './components/Manager/ManagerTenantList'
 import LandlordAddNewManager from './components/Landlord/LandlordAddNewManager'
 import LandlordAddManager from './components/Landlord/LandlordAddManager'
 import LandlordAddNewTenant from './components/Landlord/LandlordAddNewTenant'
-import ManagerAddNewTenant from './components/Manager/ManagerAddNewTenant'
 import ManagerAddLandlord from './components/Manager/ManagerAddLandlord'
 import LandlordReminders from './components/Landlord/LandlordReminders'
-import ManagerReminders from './components/Manager/ManagerReminders'
 import TenantApartmentDetails from './components/Tenant/TenantApartmentDetails'
 import TenantApartmentDetailsTwo from './components/Tenant/TenantApartmentDetailsTwo'
 import ManagerPropertyPageTwo from './components/Manager/ManagerPropertyPageTwo'
@@ -43,24 +41,12 @@ import ErrorPage from './components/Error/ErrorPage'
 import LandlordEditProfilePage from './components/Landlord/LandlordEditProfilePage'
 import LandlordProfileSettings from './components/Landlord/LandlordProfileSettings'
 import Checkbox from './components/Checkbox/Checkbox'
-import ManagerAddReminder from './components/Manager/ManagerAddReminder'
-import TenantReminders from './components/Tenant/TenantReminders'
-import TenantAddReminder from './components/Tenant/TenantAddReminder'
-import TenantEditProfilePage from './components/Tenant/TenantEditProfilePage'
-import TenantProfileSettings from './components/Tenant/TenantProfileSettings'
 import TenantPaymentPage from './components/Tenant/TenantPaymentPage'
 import TenantPaymentReview from './components/Tenant/TenantPaymentReview'
 import LandlordSendReminder from './components/Landlord/LandlordSendReminder'
 import UploadPropertyPage from './components/UploadProperty/UploadPropertyPage'
 import LandlordSelectProperty from './components/Landlord/LandlordSelectProperty'
-import ManagerSendReminder from './components/Manager/ManagerSendReminder'
-import ManagerEditProfilePage from './components/Manager/ManagerEditProfilePage'
-import ManagerProfileSettings from './components/Manager/ManagerProfileSettings'
 import ManagerDocuments from './components/Manager/ManagerDocuments'
-import LandlordEmptyProperty from './components/Landlord/LandlordEmptyProperty'
-import LandlordEmptyTenant from './components/Landlord/LandlordEmptyTenant'
-import LandlordEmptyManager from './components/Landlord/LandlordEmptyManager'
-import LandlordEmptyReminder from './components/Landlord/LandlordEmptyReminder'
 import LandlordUploadUnit from './components/Landlord/LandlordUploadUnit'
 import RentPaymentSuccessfulEmail from './components/Email/RentPaymentSuccessfulEmail'
 import RentPaymentReceiptEmail from './components/Email/RentPaymentReceiptEmail'
@@ -140,19 +126,20 @@ function App() {
             <Route path='upload-property' element={<UploadPropertyPage />} />
             <Route path='add-unit' element={<LandlordUploadUnit />} />
             <Route path='tenants' element={<ManagerTenantList />} />
-            <Route path='add-tenant' element={<ManagerAddNewTenant />} />
+            <Route path='add-tenant' element={<LandlordAddNewTenant />} />
             <Route path='landlords' element={<ManagerAddLandlord />} />
             <Route path='add-landlord' element={<ManagerAddNewLandlord />} />
-            <Route path='reminders' element={<ManagerReminders />} />
-            <Route path='send-reminder' element={<ManagerSendReminder />} />
+            <Route path='reminders' element={<LandlordReminders />} />
+            <Route path='send-reminder' element={<LandlordSendReminder />} />
+            <Route path='add-reminder' element={<LandlordAddReminder />} />
+
             <Route path='due-dates' element={<LandlordDueDates />} />
-            <Route path='add-reminder' element={<ManagerAddReminder />} />
 
             <Route
               path='profile-settings'
-              element={<ManagerProfileSettings />}
+              element={<LandlordProfileSettings />}
             />
-            <Route path='edit-profile' element={<ManagerEditProfilePage />} />
+            <Route path='edit-profile' element={<LandlordEditProfilePage />} />
 
             <Route path='notifications' element={<ManagerNotifications />} />
             <Route path='documents' element={<ManagerDocuments />} />
@@ -177,12 +164,12 @@ function App() {
               element={<TenantApartmentDetailsTwo />}
             /> */}
 
-            <Route path='reminders' element={<TenantReminders />} />
-            <Route path='add-reminder' element={<TenantAddReminder />} />
-            <Route path='edit-profile' element={<TenantEditProfilePage />} />
+            <Route path='reminders' element={<LandlordReminders />} />
+            <Route path='add-reminder' element={<LandlordAddReminder />} />
+            <Route path='edit-profile' element={<LandlordEditProfilePage />} />
             <Route
               path='profile-settings'
-              element={<TenantProfileSettings />}
+              element={<LandlordProfileSettings />}
             />
 
             <Route

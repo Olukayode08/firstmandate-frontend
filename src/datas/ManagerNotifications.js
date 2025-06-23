@@ -4,7 +4,7 @@ export const managerNotififcations = [
     date: 'dd/mm/yyy',
     time: '10:15am',
     desc: 'This is to notify you that your Mr. Sina’s rent will be due on the 20th of Februa............ ',
-    status: 'Opened',
+    status: 'Read',
     style: { color: 'black', backgroundColor: 'white' },
   },
   {
@@ -12,7 +12,7 @@ export const managerNotififcations = [
     date: 'dd/mm/yyy',
     time: '2:00pm',
     desc: 'This is to notify you that your Mr. Sina’s rent will be due on the 20th of Februa............ ',
-    status: 'Not opened',
+    status: 'Unread',
     style: { color: 'white', backgroundColor: 'black' },
   },
   {
@@ -20,7 +20,7 @@ export const managerNotififcations = [
     date: 'dd/mm/yyy',
     time: '10:15am',
     desc: 'This is to notify you that your Mr. Sina’s rent will be due on the 20th of Februa............ ',
-    status: 'Opened',
+    status: 'Read',
     style: { color: 'black', backgroundColor: 'white' },
   },
   {
@@ -28,7 +28,7 @@ export const managerNotififcations = [
     date: 'dd/mm/yyy',
     time: '10:15am',
     desc: 'This is to notify you that your Mr. Sina’s rent will be due on the 20th of Februa............ ',
-    status: 'Opened',
+    status: 'Read',
     style: { color: 'black', backgroundColor: 'white' },
   },
 ]
